@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flightcamera"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    
+    <uses-sdk
+        android:minSdkVersion="27"
+        android:targetSdkVersion="27" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".blocks.BlocksActivity"/>
+        <activity android:name=".blocks.mediaCodec.MediaCodecActivity"/>
+        <activity android:name=".whole.WholeActivity"/>
+        <activity android:name=".blocks.mediaCodec.primary.PrimaryMediaCodecActivity"/>
+        <activity android:name=".blocks.mediaCodec.bigflake.EncodeAndMuxActivity"/>
+        <activity android:name=".blocks.mediaCodec.recordCamera.RecordCameraActivity"/>
+        <activity android:name=".whole.videoPlayer.VideoPlayerActivity"/>
+        <activity android:name=".blocks.mediaCodec.recordBaseCamera.RecordBaseCameraActivity"/>
+        <activity android:name=".blocks.mediaCodec.recordCameraOpenGl.RecordCameraOpenGlActivity"/>
+        <activity android:name=".blocks.mediaCodec.bigflake.CameraToMpegActivity">
+        </activity>
+        <activity android:name=".blocks.mediaCodec.bigflake.BigflakeActivity">
+        </activity>
+        <activity android:name=".whole.record.RecorderActivity">
+        </activity>
+    </application>
+
+</manifest>
